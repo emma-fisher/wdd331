@@ -71,16 +71,21 @@ body {
 navigation
 
 -------------------------------- */
-.design-selection ul li a:link, .design-selection ul li a:visited {
+.design-selection ul li a:link, .design-selection ul li a:visited, .zen-resources ul li a:link, .zen-resources ul li a:visited {
   color: #CC5500;
 }
-.design-selection ul li a:hover {
+.design-selection ul li a:hover, .zen-resources ul li a:hover {
   color: #94B1B9;
 }
-.design-selection ul li a:active {
+.design-selection ul li a:active, .zen-resources ul li a:active {
   color: #F7ECCE;
 }
 
+/* --------------------------------
+
+break/icon thingys
+
+-------------------------------- */
 /* --------------------------------
 
 xBanner
@@ -163,20 +168,37 @@ header > h2 {
     margin: 0 20px;
   }
 
+  .summary {
+    margin: 10px 20px 0;
+  }
+
   .summary p {
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  .preamble {
+    border: 1px solid black;
+    background: #ffffff;
+    text-align: justify;
     margin: 0 20px;
   }
 
   .preamble h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin: auto;
     display: block;
     width: 100%;
     text-align: center;
+    padding-bottom: 5px;
   }
 
   .preamble p {
-    margin: 0 35px;
+    margin: 0 5px;
+  }
+
+  .preamble p:last-child {
+    padding-bottom: 10px;
   }
 
   .sidebar {
@@ -184,7 +206,7 @@ header > h2 {
   }
 
   .design-selection .select {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   .design-selection ul {
@@ -211,6 +233,34 @@ header > h2 {
 
   .design-archives {
     margin-top: 25px;
+    width: 100%;
+  }
+
+  .zen-resources {
+    background-color: #94B1B9;
+    margin-top: 50px;
+    padding: 25px 0 50px;
+  }
+
+  .zen-resources h3 {
+    font-size: 1.4em;
+    margin: 15px 35px;
+  }
+
+  .zen-resources ul li {
+    margin: 15px;
+  }
+
+  .sidebar::before {
+    content: url(../assets/hr-fish.png);
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .design-archives {
+    margin-top: 50px;
   }
 }
 
