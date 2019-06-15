@@ -54,6 +54,152 @@ table {
   border-spacing: 0;
 }
 
+#zen-supporting {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
+  grid-area: 1/1/1/1;
+}
+
+#zen-explanation {
+  animation: slide1 60s infinite;
+  -webkit-animation: slide1 60s infinite;
+}
+
+#zen-participation {
+  animation: slide2 60s infinite;
+  -webkit-animation: slide2 60s infinite;
+}
+
+#zen-benefits {
+  animation: slide3 60s infinite;
+  -webkit-animation: slide3 60s infinite;
+}
+
+#zen-requirements {
+  animation: slide4 60s infinite;
+  -webkit-animation: slide4 60s infinite;
+}
+
+@keyframes slide1 {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide3 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide4 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* --------------------------------
 
 xBackground
@@ -83,10 +229,9 @@ xGrid container
 /*#zen-participation, #zen-benefits, #zen-requirements {
     width: 100%;
 }*/
-#zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
-  display: none;
-}
-
+/*#zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
+    display: none;
+}*/
 #zen-summary {
   grid-area: 2/1/4/2;
 }

@@ -1,5 +1,6 @@
 @import 'partials/reset';
 @import 'partials/prefix-mixins';
+@import 'partials/carousel';
 @import 'partials/layout'; // responsive grid and media queries
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merienda&display=swap');
@@ -65,11 +66,9 @@ xGrid container
     width: 100%;
 }*/
 
-#zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
+/*#zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
     display: none;
-}
-
-
+}*/
 
 #zen-summary {
     //grid-area: 2/1/4/2;
@@ -79,8 +78,6 @@ xGrid container
 #zen-preamble {
     grid-area: 2/2/4/3;
 }
-
-
 
 .intro {
     display: grid;
