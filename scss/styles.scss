@@ -1,10 +1,9 @@
 @import 'partials/reset';
 @import 'partials/prefix-mixins';
-@import 'partials/carousel';
+//@import 'partials/carousel';
 @import 'partials/layout'; // responsive grid and media queries
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merienda&display=swap');
-// color palette - these colors will be the color swatches of the Colors section
 
 $color-1: #94B1B9; // Gull Gray - Action color
 $color-2: #94B7B9; // Shadow Green
@@ -12,17 +11,7 @@ $color-3: #F7ECCE; // Side Car
 $color-4: #CC5500; // burnt orange
 $color-5: #ffffff; // white
 
-
-// used this for color names, feel free to change them
-//http://chir.ag/projects/name-that-color/
-
-
-// additional colors
-
-$success: #6fce72; // green
-$alert: $color-3; // red
-
-// fonts -NEEDS HELP YESTERYEAR IS NO GOOD in garretts opinion
+// fonts 
 $secondary-font: 'Merienda', cursive;
 $primary-font: 'Yanone Kaffeesatz', sans-serif;
 
@@ -33,52 +22,38 @@ xBackground
 -------------------------------- */
 
 body {
-  /* this is the page background */
-  background-image: url("../assets/bg.png");
-  background-repeat: repeat;
-  font-family: $primary-font;
-}
+    /* this is the page background */
+    background-image: url("../assets/paper-background-60.png");
+    background-repeat: repeat;
+    font-family: $primary-font;
+  }
 
-/* --------------------------------
+  /* --------------------------------
 
 navigation
 
 -------------------------------- */
 
 @mixin nav-colors(){
-  ul{
-    li{
-      a:link, a:visited{
-        color: $color-4;
-      }
-      a:hover{
-        color: $color-1;
-      }
-      a:active{
-        color: $color-3;
+    ul{
+      li{
+        a:link, a:visited{
+          color: $color-4;
+        }
+        a:hover{
+          color: $color-1;
+        }
+        a:active{
+          color: $color-3;
+        }
       }
     }
   }
-}
-.design-selection, .zen-resources  {
-  @include nav-colors;
-}
+  .design-selection, .zen-resources  {
+    @include nav-colors;
+  }
 
-/* --------------------------------
-
-break/icon thingys
-
--------------------------------- */
-@mixin iconThingy(){
-
-        //need better icon than my little fishy
-        display: block;
-        width: 100%;
-        margin: 30px auto;
-        text-align: center;
-}
-
-/* --------------------------------
+  /* --------------------------------
 
 xBanner
 
@@ -88,180 +63,135 @@ header {
     font-family: $secondary-font;
 }
 
-/* --------------------------------
+h1 {
+    font-size: 1.7em;
+    position: absolute;
+    left: 20%;
+    width: 60vw;
+    height: 40px;
+    border: 1px solid $color-2;
+    font: normal 20px $secondary-font;
+    text-align: center;
+    color: $color-4;
+    background: #F9F7E3;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0,0,0,.15) inset,
+                        0 6px 10px rgba(0,0,0,.15);
+  }
+  
+  h1::before,
+  h1::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -67px;
+    top: 14px;
+    display: block;
+    width: 40px;
+    height: 0px;
+    border: 25px solid $color-4;
+    border-right: 20px solid $color-2;
+    border-bottom-color: $color-4;
+    border-left-color: transparent;
+    transform: rotate(-5deg);
+  }
+  
+  h1::after {
+    left: auto;
+    right: -71px;
+    border-left: 20px solid $color-2;
+    border-right: 30px solid transparent;
+    transform: rotate(5deg);
+  }
 
-xGrid container
+  /* --------------------------------
+
+xGrid
 
 -------------------------------- */
 
-.page-wrapper {
-    //display: flex;
-    //flex-direction: row;
-    //flex-wrap: wrap;
-}
-
-
-/*#zen-participation, #zen-benefits, #zen-requirements {
-    width: 100%;
-}*/
-
-/*#zen-explanation, #zen-participation, #zen-benefits, #zen-requirements {
-    display: none;
-}*/
-
-#zen-summary {
-    //grid-area: 2/1/4/2;
-    grid-area: 2/1/4/2;
-}
-
-#zen-preamble {
-    grid-area: 2/2/4/3;
-}
-
-.intro {
+#zen-intro {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 3.5fr;
+    grid-template-rows: 150px 3fr;
+    //grid-row-gap: 30px;
 }
 
 header {
     grid-area: 1/1/2/3;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    margin-top: 20px;
 }
 
-header>h1 {
-    grid-area: 1/1/3/3;
+#zen-summary {
+    grid-area: 2/1/3/2;
+    place-self: center;
+    margin: 20px;
+    margin-right: 0;
+}
+
+#zen-preamble {
+    grid-area: 2/2/3/3;
+    line-height: 1.3;
+    border: 1px solid black;
+    background: url('../assets/old-paper.jpg');
+    margin: 10px;
+    padding: 20px;
+    border-radius: 55%;
+    text-align: center;
+    h3 {
+        font-size: 1.4em;
+    }
 }
 
 header>h2 {
-    grid-area: 3/1/4/2;
+    position: relative;
+    top: 85px;
+    font-size: 1.4em;
 }
 
-.select {
-    text-align: center;
-}
+/* --------------------------------
 
-.design-selection nav {
-    columns: 2;
-    //display: grid;
-    //grid-template-columns: 1fr 1fr;
-    //grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-}
+xSections
 
-.design-archives  {
-    columns: 3;
+-------------------------------- */
 
-}
+.explanation, .participation, .benefits, .requirements {
+    width: 70vw;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px auto;
+    transform: skewY(6deg);
+    background: url('../assets/old-paper.jpg');
 
-.zen-resources {
-    text-align: right;
-}
-
-
-// mobile 
-
-@media screen and (max-width: 500px){
-    .intro {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 2fr;
+    p {
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        padding: 0 10px;
     }
-
-    .intro h1{
-        margin:auto;
-        display: block;
-    }
-    .intro h2{
-        margin: 0 20px;
-    }
-    .summary{
-        margin: 10px 20px 0; 
-    }
-    .summary p{
-        text-align: left;
-        line-height: 1.4;
-    }
-
-    .preamble{
-        border: 1px solid black;
-        background: $color-5;
-        text-align: justify;
-        margin: 0 20px;
-
-    }
-    .preamble h3{
-        font-size: 1.4em;
-        margin: auto;
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding-bottom: 5px;
-    }
-    .preamble p{
-        margin: 0 5px;
-    }
-    .preamble p:last-child{
+    p:last-child {
+        border-bottom: 1px solid black;
         padding-bottom: 10px;
     }
 
-    .sidebar{
-        margin-top: 50px;
+    p:first-of-type {
+        border-top: 1px solid black;
+        padding-top: 10px;
     }
-    .design-selection .select{
-        font-size: 1.4em;
-    }
-    .design-selection ul{
-        column-count: 1;
-        column-gap: 20px;
-        width: 100%;
-    }
-   
-    .design-selection ul li{
-        width: 100%;
+
+    h3 {
+        padding: 20px 0;
         text-align: center;
-        margin: auto;
-        padding: 15px;
-    }
-    .design-selection ul li a:first-child{
-        font-size: 1.1em;
-    }
-        .design-selection ul li a:last-child{
-        font-size: .9em;
-        display: block;
-    }
-    .design-archives{
-        margin-top: 25px;
-        width: 100%;;
-    }
-    .zen-resources{
-        background-color: $color-1;
-        margin-top: 50px;
-        padding: 25px 0 50px;
-    }
-    .zen-resources h3{
-        font-size: 1.4em;
-        margin: 15px 35px;
-    }
-    .zen-resources ul li{
-        margin: 15px;
-    }
-
-    .sidebar::before{
-        content: url(../assets/hr-fish.png);
-        @include iconThingy;
-        
-    }
-    .design-archives{
-        margin-top: 50px;
-    }
-
-    .design-archives::after{
-        //content: url(../assets/hr-fish.png);
-        //@include iconThingy;
     }
 }
 
+#zen-supporting {
+    background-image: linear-gradient($color-2, white);
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
 
-
+.explanation {
+    margin-top: 50px;
+}
