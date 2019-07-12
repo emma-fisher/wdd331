@@ -198,11 +198,14 @@ xSections
   padding: 10px;
   margin: 10px auto;
   transform: skewY(6deg);
+  height: 75px;
+  transition: scale 0.5s ease-in;
 }
 .explanation p, .participation p, .benefits p, .requirements p {
   border-right: 1px solid black;
   border-left: 1px solid black;
   padding: 0 10px;
+  transform: scale(0);
 }
 .explanation p:last-child, .participation p:last-child, .benefits p:last-child, .requirements p:last-child {
   border-bottom: 1px solid black;
@@ -216,6 +219,16 @@ xSections
   padding: 20px 0;
   text-align: center;
   font-size: 1.3em;
+}
+.explanation:hover, .participation:hover, .benefits:hover, .requirements:hover {
+  transform: scale(1.1) skewY(6deg);
+  height: auto;
+  box-shadow: 10px 10px 8px #888888;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.explanation:hover p, .participation:hover p, .benefits:hover p, .requirements:hover p {
+  transform: scale(1);
 }
 
 #zen-supporting {
