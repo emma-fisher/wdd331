@@ -256,9 +256,6 @@ xSelect a Design
   text-align: center;
 }
 .design-selection nav, .design-archives nav {
-  columns: 2;
-  column-rule: 4px double black;
-  column-gap: 10px;
   font-size: 1.1em;
 }
 .design-selection h3, .design-archives h3 {
@@ -314,6 +311,19 @@ xLarge screen
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .design-selection li {
+    font-size: 1.1em;
+    align-items: center;
+    background-image: url(../assets/label.svg);
+    background-size: 20vw;
+    background-repeat: no-repeat;
+    height: 20vw;
+  }
+  .design-selection a {
+    margin-top: 10vw;
   }
 
   .design-archives {
