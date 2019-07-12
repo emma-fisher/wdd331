@@ -321,6 +321,7 @@ xLarge screen
     background-size: 20vw;
     background-repeat: no-repeat;
     height: 20vw;
+    text-shadow: 1px 1px 1px black;
   }
   .design-selection a {
     margin-top: 10vw;
@@ -353,6 +354,10 @@ xLarge screen
 
   .explanation, .participation, .benefits, .requirements {
     width: 60vw;
+  }
+
+  .navElementInside {
+    margin-top: 145px;
   }
 }
 
