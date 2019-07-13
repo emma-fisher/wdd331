@@ -158,7 +158,7 @@ header {
     background-color: whitesmoke;
     margin: 10px;
     padding: 20px;
-    //border-radius: 55%;
+    border-radius: 25px;
     text-align: center;
     word-wrap: normal;
     h3 {
@@ -176,14 +176,14 @@ xSections
 
 .explanation, .participation, .benefits, .requirements {
     width: 80vw;
-    background-color: whitesmoke;
-    border: 1px solid black;
+    //background-color: whitesmoke;
+    //border: 1px solid black;
     padding: 10px;
     margin: 10px auto;
     transform: skewY(6deg);
     height: 75px;
     transition: scale .5s ease-in;
-    //background-image: url("/assets/old-paper.jpg");
+    
 
     p {
         border-right: 1px solid black;
@@ -206,12 +206,18 @@ xSections
         padding: 20px 0;
         text-align: center;
         font-size: 1.3em;
+        background-image: url("/assets/long-label.svg");
+        background-size: contain;
+        ///background-size: auto 150px;
+        background-repeat: no-repeat;
+        color: whitesmoke;
+        background-position: center;
     }
 
     &:hover {
       transform: scale(1.1) skewY(6deg);
       height: auto;
-      box-shadow: 10px 10px 8px #888888;
+      //box-shadow: 10px 10px 8px #888888;
       margin-top: 40px;
       margin-bottom: 40px;
     }
@@ -324,12 +330,19 @@ xLarge screen
                 background-size: 20vw;
                 background-repeat: no-repeat;
                 height: 20vw;
-                // align-self:center;
-                // vertical-align: middle;
             }
-            a {
-                margin-top: 10vw;
+
+            li * {
+                display:block;
             }
+            li a:first-child {
+                margin-top: 6vw;
+
+            }
+            ul li a:link {
+                color: white;
+            }
+            
     }
 
     .design-archives {
