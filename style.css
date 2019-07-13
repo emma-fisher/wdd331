@@ -179,6 +179,7 @@ header {
   background-color: whitesmoke;
   margin: 10px;
   padding: 20px;
+  border-radius: 25px;
   text-align: center;
   word-wrap: normal;
 }
@@ -193,8 +194,6 @@ xSections
 -------------------------------- */
 .explanation, .participation, .benefits, .requirements {
   width: 80vw;
-  background-color: whitesmoke;
-  border: 1px solid black;
   padding: 10px;
   margin: 10px auto;
   transform: skewY(6deg);
@@ -219,11 +218,15 @@ xSections
   padding: 20px 0;
   text-align: center;
   font-size: 1.3em;
+  background-image: url("/assets/long-label.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+  background-position: center;
 }
 .explanation:hover, .participation:hover, .benefits:hover, .requirements:hover {
   transform: scale(1.1) skewY(6deg);
   height: auto;
-  box-shadow: 10px 10px 8px #888888;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -322,8 +325,14 @@ xLarge screen
     background-repeat: no-repeat;
     height: 20vw;
   }
-  .design-selection a {
-    margin-top: 10vw;
+  .design-selection li * {
+    display: block;
+  }
+  .design-selection li a:first-child {
+    margin-top: 6vw;
+  }
+  .design-selection ul li a:link {
+    color: white;
   }
 
   .design-archives {
