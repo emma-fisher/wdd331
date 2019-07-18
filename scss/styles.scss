@@ -10,6 +10,8 @@ $color-2: #94B7B9; // Shadow Green
 $color-3: #F7ECCE; // Side Car
 $color-4: #CC5500; // burnt orange
 $color-5: #ffffff; // white
+$color-6: #bcaa96; // wood brown
+$color-7: #444242; // chalkboard grey
 
 // fonts
 $secondary-font: 'Merienda', cursive;
@@ -107,7 +109,7 @@ h1 {
     border-right: 20px solid $color-2;
     border-bottom-color: $color-4;
     border-left-color: transparent;
-    transform: rotate(-5deg);
+    //transform: rotate(-5deg);
   }
 
   h1::after {
@@ -115,7 +117,7 @@ h1 {
     right: -71px;
     border-left: 20px solid $color-2;
     border-right: 30px solid transparent;
-    transform: rotate(5deg);
+    //transform: rotate(5deg);
   }
 
   header>h2 {
@@ -154,19 +156,18 @@ header {
 #zen-preamble {
     grid-area: 2/2/3/3;
     line-height: 1.3;
-    border: 1px solid black;
-    background-color: whitesmoke;
+    border: 8px double $color-6;
+    background-color: $color-1;
     margin: 10px;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 5px;
     text-align: center;
+    color: whitesmoke;
     word-wrap: normal;
     h3 {
         font-size: 1.4em;
     }
 }
-
-
 
 /* --------------------------------
 
@@ -180,42 +181,44 @@ xSections
     //border: 1px solid black;
     padding: 10px;
     margin: 10px auto;
-    transform: skewY(6deg);
+    //transform: skewY(6deg);
     height: 75px;
     transition: scale .5s ease-in;
-    
+
 
     p {
-        border-right: 1px solid black;
-        border-left: 1px solid black;
+        border-right: 1px solid $color-6;
+        border-left: 1px solid $color-6;
         padding: 0 10px;
+        color: whitesmoke;
+        background-color: $color-7;
         transform: scale(0);
 
     }
     p:last-child {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $color-6;
         padding-bottom: 10px;
     }
 
     p:first-of-type {
-        border-top: 1px solid black;
+        border-top: 1px solid $color-6;
         padding-top: 10px;
+        margin-top: 10px;
     }
 
     h3 {
         padding: 20px 0;
         text-align: center;
         font-size: 1.3em;
-        background-image: url("/assets/long-label.svg");
+        background-image: url("assets/long-label.svg");
         background-size: contain;
-        ///background-size: auto 150px;
         background-repeat: no-repeat;
         color: whitesmoke;
         background-position: center;
     }
 
     &:hover {
-      transform: scale(1.1) skewY(6deg);
+      transform: scale(1.1);
       height: auto;
       //box-shadow: 10px 10px 8px #888888;
       margin-top: 40px;
@@ -228,13 +231,13 @@ xSections
 }
 
 #zen-supporting {
-    background-image: linear-gradient($color-2, white);
-  transform: skewY(-6deg);
-  transform-origin: top left;
+    background-image: url("assets/bg-wood-01.jpg");
+    border: 1px solid black;
+    box-shadow: 10px 10px 8px #888888;
 }
 
 .explanation {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 /* --------------------------------
@@ -256,7 +259,7 @@ xSelect a Design
         // column-rule: 4px double black;
         // column-gap: 10px;
         font-size: 1.1em;
-        
+
     }
 
     h3 {
@@ -326,7 +329,7 @@ xLarge screen
         li {
                 font-size: 1.1em;
                 align-items: center;
-                background-image: url(../assets/label.svg);
+                background-image: url("assets/label.svg");
                 background-size: 20vw;
                 background-repeat: no-repeat;
                 height: 20vw;
@@ -340,9 +343,13 @@ xLarge screen
 
             }
             ul li a:link {
-                color: white;
+                color: whitesmoke;
             }
-            
+
+            ul li a:hover {
+                transform: scale(1.1);
+            }
+
     }
 
     .design-archives {
@@ -372,7 +379,8 @@ xLarge screen
     }
 
     #zen-supporting {
-        margin-top: 15vw;
+        margin-top: 5vw;
+        padding-top: 1vw;
     }
 
     .explanation, .participation, .benefits, .requirements {
@@ -388,7 +396,7 @@ xLarge screen
         //     // flex-wrap: no-wrap;
         //     // justify-content: space-between;
         //     }
-        
+
         //     li {
         //     display:flex;
         //     font-size: 0.9em;
@@ -406,3 +414,4 @@ xLarge screen
 
 
   // Some svgs taken from https://www.vecteezy.com
+  // wooden background taken from https://www.designbolts.com/2013/02/09/20-high-quality-free-seamless-wood-textures-photoshop-patterns-for-3d-mapping/
