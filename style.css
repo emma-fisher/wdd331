@@ -169,6 +169,12 @@ header {
   margin: 20px;
   margin-right: 0;
 }
+#zen-summary a {
+  color: #94B1B9;
+}
+#zen-summary a:hover {
+  color: #444242;
+}
 
 #zen-preamble {
   grid-area: 2/2/3/3;
@@ -239,6 +245,13 @@ xSections
   background-image: url("assets/bg-wood-01.jpg");
   border: 1px solid black;
   box-shadow: 10px 10px 8px #888888;
+}
+#zen-supporting a {
+  color: whitesmoke;
+  padding: 5px;
+}
+#zen-supporting a:hover {
+  color: #444242;
 }
 
 .explanation {
